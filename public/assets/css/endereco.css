@@ -1,0 +1,135 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+  }* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  .nav {
+      display: flex;
+      background-color: #3A95B5;
+      width: 100vw;
+      height: 7vh;
+      color: white;
+      align-items: center;
+      font-weight: bold;
+  }
+
+  .nav>p {
+      margin-left: 50%;
+      transform: translate(-50%);
+  }
+
+  .return {
+      align-items: center;
+      text-align: center;
+      border-radius: 100%;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      width: 2.3rem;
+      height: 2.3rem;
+      font-weight: bold;
+      transition: 0.5s;
+  }
+
+  .return:hover {
+      box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #fff;
+  }
+  .container {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .infos {
+    width: 70vw;
+    height: 70vh;
+    -webkit-box-shadow: 10px 10px 10px 0px rgba(163, 163, 163, 1);
+    -moz-box-shadow: 10px 10px 10px 0px rgba(163, 163, 163, 1);
+    box-shadow: 10px 10px 10px 0px rgba(163, 163, 163, 1);
+    display: grid;
+    place-items: center;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;    
+  }
+  .colum{
+      display: flex;
+      flex-direction: column;
+  }
+  input{
+    color: gray;
+    outline: none;
+    padding-left: 20px;
+    width: 20vw;
+    height: 6vh;
+    border: none;
+    -moz-box-shadow: 10px 10px 5px -3px rgba(171,171,171,1);
+    box-shadow: 10px 10px 5px -3px rgba(171,171,171,1);
+  }
+  label{
+    margin-left: 1vw;
+    color: #9b9b9b;
+  }
+  .colum > label:not(:first-child){
+    margin-top: 10vh;
+  }
+#button{
+  border: none;
+  background-color: #3A95B5;
+  width: 18vw;
+  height: 5vh;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+#button1{
+  position: fixed;
+  border: none;
+  background-color: red;
+  width: 9vw;
+  font-weight: bold;
+  height: 5vh;
+  margin-top: 60vh;
+  margin-left: 50vw;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+@media(max-width:900px){
+  input{
+    width: 30vw;
+  }
+  .infos{
+    grid-template-columns: 1fr;
+  }
+  .colum > label:not(:first-child){
+    margin-top: 2vh;
+  }
+  .colum > label:not(:last-child){
+    margin-top: 2vh;
+  }
+  #button1{
+    font-size: 11px;
+  }
+}
+@media(max-width:400px){
+  #button1{
+    font-size: 7px;
+  }
+  #button{
+    font-size: 10px;
+  }
+  label{
+    font-size: 10px;
+  }
+}

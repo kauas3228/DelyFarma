@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #3a95b5;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Heebo';
+}
+.errors-list {
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    top: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+  }
+  .error {
+    list-style-type: none;
+    padding: 8px 32px;
+    border-radius: 8px;
+    background-color: #7c7676;
+    transform: translateY(-60px);
+    opacity: 0;
+    animation: errorAnimation 10s cubic-bezier(0.075, 0.82, 0.165, 1) 1 forwards;
+    pointer-events: none;
+    font-weight: bold;
+  }
+  .error__message {
+    color: #fff;
+  }
+  @keyframes errorAnimation {
+    20% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+}
+.container{
+    background-color: white;
+    pad: 6px;
+    width: 21.875rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+form{
+    position: absolute;
+    margin-top: 9rem;
+    width: 18.75rem;
+    height: 23.125rem;
+}
+
+.buttonsForm{
+    margin-top: 6.6rem;
+    position: relative;
+    border-radius: 40px;
+    box-shadow: 0 0 7px #3a95b5;
+    
+}
+.buttonsForm button{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    position: relative;
+    padding: 10px 29px;
+    color: white;
+    transition: .5s;
+}
+#botaoRegistre-se{
+    color: #3a95b5;
+}
+.color{
+    position: absolute;
+    width: 108px;
+    height: 100%;
+    background-color: #3a95b5;
+    border-radius: 30px;
+    transition: .5s;
+}
+input[type="text"], input[type="password"] {
+    border: none;
+    margin-top: 20px;
+    border-radius: 60px;
+    padding: 8px 0 9px 35px;
+    width: 100%;
+    caret-color: #3a95b5;
+    border: 1px solid #3a95b5;
+    outline: none;
+}
+button[type="submit"] {
+    background-color: #3a95b5;
+    color: white;
+    border-radius: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 0 8px 0px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+.esqueceuSenha{
+    margin: 8px 0 0 5px;
+    width: 100%;
+    font-size: 13px;
+}
+.divTermos{
+    margin: 10px 0 0 5px;
+    width: 80%;
+    font-size: 13px;
+}
+#singIn{
+    left: 25px;
+}
+#singUp{
+    margin-top: 3rem;
+    left: 450px;
+}
+i{
+    position: absolute;
+    left: 0;
+    padding: 10px 10px;
+    color: #3a95b5;
+}
+#iconEmailLogin{
+    top: 17px;
+}
+#iconSenhaLogin{
+    top: 70.6px;
+}
+
+::placeholder{
+    color: #3a95b5;
+}
+#linkEsqueceuSenha{
+    margin-left: 160px;
+    color: #3857D1;
+    font-weight: 300;
+}
+#submitLogin{
+    margin-top: 1rem;
+}
+#iconUserRegistro{
+    top: 15px;
+}
+#iconEmailRegistro{
+    top: 70px;
+}
+#iconCpf{
+    top: 124px;
+}
+#iconNumber{
+    top: 177px;
+}
+#iconSenha1{
+    margin-top: -40px;
+}
+#iconSenha2{
+    margin-top: -37px;
+}
+button[type="submit"]:hover{
+    background-color: #3857D1;
+    transition: 1s;
+}
+input[type="email"], input[type="number"] {
+    border: none;
+    margin-top: 20px;
+    border-radius: 60px;
+    padding: 8px 0 9px 35px;
+    width: 100%;
+    caret-color: #3a95b5;
+    border: 1px solid #3a95b5;
+    outline: none   ;
+}
+img{
+    margin-top: -1rem;
+    position: absolute;
+    width: 10rem;
+    height: 8rem;
+}
+.mostrarSenha{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 30px;
+    position: relative;
+    left: -3rem;
+    top: 1vh;
+}

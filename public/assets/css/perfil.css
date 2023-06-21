@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+.nav {
+    display: flex;
+    background-color: #3A95B5;
+    width: 100vw;
+    height: 7vh;
+    color: white;
+    align-items: center;
+    font-weight: bold;
+}
+
+.nav>p {
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.return {
+    align-items: center;
+    text-align: center;
+    border-radius: 100%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 2.3rem;
+    height: 2.3rem;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.return:hover {
+    box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #fff;
+}
+/* font imports */
+@font-face {
+    font-family: 'Jeju Ghotic';
+    src: url('../fonts/JejuGothic-Regular.ttf');
+}
+/*  */
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #3A95B5;
+    height: 70px;
+    padding: 0 16px;
+}
+.header__title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Jeju Ghotic';
+    color: white;
+    font-size: 24px;
+    font-weight: normal;
+}
+.main-padding {
+    padding: 48px;
+}
+.preview {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+    padding: 8px;
+    background-color: #EAEAEA;
+}
+.preview__icon {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    background-color: #EAEAEA;
+    border-radius: 50%;
+}
+.user__name {
+    font-size: 42px;
+    font-weight: normal;
+}
+.user__username {
+    font-size: 20px;
+}
+.infor {
+    padding: 12px 48px;
+    border-bottom: 2px solid #9B9B9B;
+}
+.infor__title {
+    font-size: 20px;
+    color: #676767;
+    font-weight: normal;
+}
+.infor__value {
+    font-size: 20px;
+    font-weight: normal;
+}
+@media (max-width: 768px) {
+    .main-padding {
+        padding: 32px;
+    }
+    .infor {
+        padding: 12px 32px;
+    }
+    .preview__icon {
+        width: 40px;
+    }
+    .user__pic {
+        width: 100px;
+    }
+    .user__name {
+        font-size: 32px;
+    }
+    .user__username {
+        font-size: 20px;
+    }
+}

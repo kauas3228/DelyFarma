@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F4F4F4;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-family: 'Heebo';
+}
+.nav-bar{
+    width: 100vw;
+    height: 4.6rem;
+    align-items: center;
+    display: flex;
+}
+.logo{
+    width: 16vw;
+    margin-top: 1vh;
+    height: 140px;
+    object-fit: contain;
+}
+.pesquisa{
+    border: none;
+    background-color: #D0C8C8;
+    width: 30vw;
+    height: 2.935625rem;
+    outline: none;
+    color: #856F6F;
+    font-size: 20px;
+    padding-left: 4rem;
+    caret-color: #856F6F;
+}
+#lupa{
+    position: absolute;
+    margin-left: 17vw;
+    font-size: 30px;
+    color: #856F6F;
+    font-weight: bold;
+}
+.itens{
+    position: relative;
+    align-items: center;
+    display: flex;
+    width: 50vw;
+    height: 3.6rem;
+    transition: 0.5s;
+}
+.ul-nav{
+    align-items: center;
+    display: flex;
+    position: relative;
+    float: right;
+    list-style: none;
+    height: 3.6rem;;
+}
+.li-nav{
+    outline: none;
+    display: block;
+}
+
+.icone{
+    font-size: 2.5rem;
+    border: none;
+    padding-left: 3vw;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+}
+.text{
+    border: none;
+    font-size: 1rem;
+    font-weight: medium;
+    cursor: pointer;
+    outline: none;
+    background:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.hamburguer{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    right: 1rem;
+}
+.hamburguerCat{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    right: 1rem;
+    margin-right: 90vw;
+    margin-top: 17vh;
+}
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+#line1, #line2, #line3{
+    background-color: #856F6F;
+}
+.itens-categoria{
+    position: relative;
+    width: 100vw;
+    margin-left: -100vw;
+    margin-top: 12vh;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+.ul-categoria{
+    display: flex;
+    list-style: none;
+}
+.li-itens:not(:last-child){
+    margin-right: 15px;
+}
+hr{
+    width: 100%;
+    height: 1px;
+    color: #E5DDDD;
+    position: absolute;
+    margin-left: -100vw;
+    margin-top: 1.4vh;
+} 
+.section-carrousel{
+    width: 60vw;
+    height: 50vh;
+    margin-top: 4vh;
+    margin-left: -80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sliders{
+    height: 40vh;
+    overflow: hidden;
+}
+.slider{
+    width: 400%;
+    height: 40vh;
+    display: flex;
+}
+.slider input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+.slide img{
+    width: 60vw;
+    height: 40vh;
+}
+.manual-navigation{
+    position: absolute;
+    width: 60vw;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 1vw;
+}
+.manual-btn:hover{
+    background-color: white;
+}
+#radio1:checked ~ .first{
+    margin: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+.itens-compras{
+    margin-left: -98vw;
+    margin-top: 0vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 95vw;
+}
+.itens-compras > div{
+    box-shadow: -7px 2px 36px 0px rgba(87,87,87,0.75);
+    height: 46vh;
+    background-color: #fff;
+    flex: 1 1 30vw;
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+.itens-compras img {
+    width: 7rem;
+    height: 22.517482517482517vh;
+    object-fit: contain;
+}
+.distancia{
+    margin-top: 40vh;
+}
+.card-compra{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#promocaum{
+    color: #E51F1F;
+}
+.card-compra h2{
+    color: #E51F1F;
+}
+.produtosInfantis, .produtosHigiene, .produtosSaude, .produtoswhey, .produtosVitaminas, .produtosSkin, .produtosPerfume{
+    display: none;
+}
+.card-compra button{
+    width: 15vw;
+    background-color: #3A95B5;
+    height: 4vh;
+    color: white;
+    border: none;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.card-compra button:hover{
+    background-color: #cdcdcd;
+    color: #000;
+}
+.rodape{
+    position: relative;
+    width: 97vw;
+    height: 10vh;
+    margin-left: -99.1vw;
+    background-color: #3A95B5;
+    display: flex;
+    align-items: center;
+}
+.rodape > h3{
+    color: white;
+    margin-left: 1vw;
+}
+.rodape input{
+    width: 25vw;
+    height: 5vh;
+    background-color: #274AD6;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 1vw;
+    padding-left: 2vw;
+}
+.rodape button{
+    font-weight: bold;
+    width: 5rem;
+    height: 5vh;
+    margin-left: 1vw;
+    border: none;
+    cursor: pointer;
+    background-color: #FCE40D;
+    color: black;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.rodape button:hover{
+    border-radius: 30px;
+}
+.color::placeholder{
+    color: white;
+}
+
+/* Criando efeito de linha das categorias  */
+
+@media(min-width:769px){
+
+    .noti::after{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        content: var(--qtd-itens);
+        position: absolute;
+        right: 30.9vw;
+        top: -1.7rem;
+        width: 1.2em;
+        height: 1.2em;
+        background-color: #e14659;
+        border-radius: 20px;
+    }
+    .li-itens {
+        position: relative;
+    }
+    .li-itens::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: #856F6F;
+        left: 0;
+        top: 22px;
+        transition: .5s ;
+    }
+    .li-itens:hover::after {
+        width: 100%;
+    }
+}
+.ofertas{
+    display: none   ;
+}
+/* criando condições para tablet*/
+
+@media(max-width:912px){
+    .li-itens{
+        font-size: 12px;
+    }
+    #bem-vindo{ 
+        font-size: 13px;
+    }
+    .card-compra img{
+         height: 22vh;
+    }.card-compra{
+        font-size: 20px;
+    }
+    #lupa{
+        font-size: 20px;
+    }
+    .ul-categoria{
+        font-size: 15px;
+    }
+    .card-compra button{
+        width: 20vw;
+        background-color: #3A95B5;
+        color: white;
+        border: none;
+        padding: 3px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    i{
+        font-size: 20px;
+    }
+    .noti{
+        display: none;
+    }
+}
+/* fazendo efeito de nav e de categorias no mobile */
+
+@media(max-width:768px){
+        
+    *{
+        font-size: 12px;
+    }
+    hr{
+        display: none;
+    }
+    .li-itens:not(:last-child){
+        margin-right: 0px;
+    }
+    
+    .li-itens:first-child{
+        margin-left: 0vw;
+    }
+    .ul-nav{
+        flex-direction: column;
+        float: none;
+    }
+    .ul-categoria{
+        background-color: #cdcdcd;
+        flex-direction: column;
+        gap: 6px;
+        margin-right: 0px;
+        border-radius: 10px;
+    }
+    .hamburguer{
+        display: block;
+        transition: 1s;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+    .hamburguerCat{
+        display: block;
+        transition: 0s;
+    }    
+    .itens{
+        z-index: 2;
+        background-color: #F4F4F4;
+        height: 45vh;
+        position: fixed;
+        top: -120%;
+        gap: 0;
+        width: 100vw;
+        display: block;
+        transition: 0.6s;
+        text-align: center;
+    }
+    .itens-categoria{
+        z-index: 1;
+        background-color: #f4f4f4;
+        position: fixed;
+        left: -200%;
+        gap: 0;
+        top: 6vh;
+        width: 40vw;
+        display: block;
+        transition: 0.6s;
+        text-align: center;
+    }
+    .icone{
+        font-size: 35px;
+        padding-left: 1vw;
+    }
+    .text{
+        padding-left: 1vw;
+        font-size: 20px;
+    }
+    .itens.active{
+        top: 0px;
+    }
+    .itens-categoria.active{
+        margin-left: 210%;
+    }
+    .pesquisa{
+        width: 70vw;
+    }
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1){
+        transform: rotate(-45deg) translateY(11px);
+    }
+    .hamburguer.active .bar:nth-child(3){
+        transform: rotate(45deg) translateY(-11px);
+    }
+
+    .hamburguerCat.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguerCat.active .bar:nth-child(1){
+        transform: rotate(45deg) translateY(11px);
+    }
+    .hamburguerCat.active .bar:nth-child(3){
+        transform: rotate(-45deg) translateY(-11px);
+    }
+
+    .text:hover{
+        transition: 1s;
+        font-size: 22px;
+    }
+    .icone:hover{
+        transition: 1s;
+        font-size: 38px;
+    }
+    .hamburguerCat.active{
+        z-index: 1;
+    }
+}
+
+/* Arrumando font pro mobile */
+
+@media(max-width:400px){
+    .itens{
+        left: 0;
+    }
+    .icone{
+        font-size: 30px;
+        padding-left: 1vw;
+    }
+    .text{
+        padding-left: 1vw;
+        font-size: 15px;
+    }
+    .text:hover{
+        transition: 1s;
+        font-size: 17px;
+    }
+    .icone:hover{
+        transition: 1s;
+        font-size: 35px;
+    }
+    .hamburguerCat{
+        margin-right: 85vw;
+    }
+}
+/* Arrumando liste no tablet */
+@media(max-width:950px){
+    .li-itens:first-child{
+        margin-left: 1vw;
+    }
+}

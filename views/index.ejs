@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styleInicial.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="icon" href="/assets/img/grupo logo.svg">
+    <title>Dely Farma</title>
+</head>
+<body>
+
+    <!-- Nav bar-->
+
+    <nav>
+        <div class="nav-bar">
+            <img class="logo" src="/assets/img/logo_farma-removebg-preview.png">
+            <input type="search" placeholder="O que você procura?" class="pesquisa">
+            <i class="bi bi-search" id="lupa"></i>
+
+            <div class="itens">
+                <ul class="ul-nav">
+                    <li class="li-nav"><button class="icone"><a href="/user/perfil"><i class="bi bi-person-circle" id="user"></i></a></button></li>
+                    <li class="li-nav"><button class="text" id="bem-vindo">Olá, Bem-Vindo!<br>
+                    <%= usuario %>
+                    </li>
+                    <li class="li-nav"><button class="icone"><a href="/user/carrinho"><i class="bi bi-cart3"id="user"></i></a></button></li>
+                    <li class="li-nav"><button class="text"><a href="/user/carrinho">Meu Carrinho</a></button></li>
+                    <li class="li-nav"><button class="icone"><a href="/user/pedidos"><i class="bi bi-handbag" id="user"></i></a></button></li>
+                    <li class="li-nav"><button class="text"><a href="/user/pedidos">Meus pedidos</a></button></li>
+                    <li class="li-nav"><button class="icone"><i class="bi bi-headset" id="user"></i></button></li>
+                    <li class="li-nav"><button class="text"><a href="/user/suporte">Suporte Técnico</a></button></li>        
+                </ul>
+                
+            </div>
+
+            <div class="hamburguer">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+
+    </nav>
+
+    <main>
+        
+        <!-- Sessão de categorias-->
+
+        <section class="section-categorias">
+
+        <!-- Criando lista de categorias -->
+
+            <div class="itens-categoria">
+                <ul class="ul-categoria">
+                    <li class="li-itens" id="todasCategorias">Todas Categorias</li>
+                    <li class="li-itens" id="ofertas">Ofertas</li>
+                    <li class="li-itens" id="produtosInfantis">Produtos Infantis</li>
+                    <li class="li-itens" id="higiene">Higiene e Beleza</li>
+                    <li class="li-itens" id="medicamentos">Medicamentos e Saúde</li>
+                    <li class="li-itens" id="produtoswhey">Whey Protein</li>
+                    <li class="li-itens" id="vitaminas">Vitaminas e Suplemento</li>
+                    <li class="li-itens" id="skinCare">Skin Care</li>
+                    <li class="li-itens" id="perfumaria">Perfumaria</li>
+                </ul>
+            </div>
+
+            <!-- Criando menu Hamburguer navbar-->
+
+            <div class="hamburguerCat">
+
+                <span class="bar" id="line1"></span>
+                <span class="bar" id="line2"></span>
+                <span class="bar" id="line3"></span>
+            
+                
+            </div>
+            <hr>
+
+        </section>
+
+        <!--Sessão do carrousel-->
+        
+            <section class="section-carrousel">
+            <div class="sliders">
+            <div class="slider">
+
+                <!--Radio buttons-->
+
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+
+                <!--Slides Images-->
+
+                <div class="slide first">
+                    <img src="/assets/img/promo-pampers.jpg" alt="Promo 1">
+                </div>
+
+                <div class="slide">
+                    <img src="/assets/img/promo2.png" alt="Promo 2">
+                </div>
+
+                <div class="slide">
+                    <img src="/assets/img/promo3melhorada.png" alt="Promo 3">
+                </div>
+
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+        </section>
+
+
+        <!--Criando cards de compra-->
+
+        <section class="itens-compras">
+            <!-- Cards de compra-->
+            <div class="card-compra">
+                <img src="/assets/img/sorrisal imagem.png">
+                <p>Sonrizal Tradicional</p>
+                <p>com 10 comprimidos efervecentes</p>
+                <h2>R$ 6,39</h2>
+                <h5>41% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/imagem agua micelar.png">
+                <p>Água Micelar Nivea Air 7</p>
+                <p>Em 1200ml</p>
+                <h2>R$ 21,45</h2>
+                <h5>24% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/imagem protetor solar.png">
+                <p>Protetor Solar Nivea Sun FPS30</p>
+                <p>Protetor E Bronze 125Ml</p>
+                <h2>R$ 39,90</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/foto vitamina c.png">
+                <p>Vitamina C Triple 1g + Zinco + Vitamina D</p>
+                <p>com 10 comprimidos efervecentes</p>
+                <h2>R$ 13,80</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/imagem hidratante.png">
+                <p>Loção Hidratante Desodorante Corporal </p>
+                <p>Cuide-se Bem Bubbaloo Morango 400ml</p>
+                <h2>R$ 60,00</h2>
+                <h5>Preço Normal</h5>
+                <a href="/user/produto"><button onclick="adicionarItens()">Comprar</button></a>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/buscopan img.png">
+                <p>Buscopan</p>
+                <p>20 comprimidos</p>
+                <h2>R$ 14,89</h2>
+                <h5>25% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/desodorante.png">
+                <p>Desodorante Dove Origial</p>
+                <p>Aerisol 250ml</p>
+                <h2>R$ 19,90</h2>
+                <h5>22% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/cicaPlast.png">
+                <p>Cicaplast Baume B5 La Roche</p>
+                <p>40ml</p>
+                <h2>R$ 79,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/captopril.png">
+                <p>Captopril 50mg</p>
+                <p>com 30 comprimidos</p>
+                <h2>R$ 11,95</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+
+            <!-- Criando cards de compra -->
+        </section>
+
+        <!--Sessão de ofertas-->
+
+        <section class="itens-compras ofertas">
+            
+            <div class="card-compra">
+                <img src="/assets/img/sorrisal imagem.png">
+                <p>Sonrizal Tradicional</p>
+                <p>com 10 comprimidos efervecentes</p>
+                <h2>R$ 6,39</h2>
+                <h5>41% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+
+            <div class="card-compra">
+                <img src="/assets/img/imagem agua micelar.png">
+                <p>Água Micelar Nivea Air 7</p>
+                <p>Em 1200ml</p>
+                <h2>R$ 21,45</h2>
+                <h5>24% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+
+            <div class="card-compra distancia">
+                <img src="/assets/img/buscopan img.png">
+                <p>Buscopan</p>
+                <p>20 comprimidos</p>
+                <h2>R$ 14,89</h2>
+                <h5>25% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+
+            <div class="card-compra distancia">
+                <img src="/assets/img/desodorante.png">
+                <p>Desodorante Dove Origial</p>
+                <p>Aerisol 250ml</p>
+                <h2>R$ 19,90</h2>
+                <h5>22% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/pampers.png">
+                <p>Fralda Pampers Pants</p>
+                <p>Ajuste Total M 84...</p>
+                <p id="promocaum">Leve 2 e pague</p>
+                <h2>R$ 91,99</h2>
+                <h5>40% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+        </section>
+
+        <!-- Sessão Produtos Infantis-->
+        
+        <section class="itens-compras produtosInfantis">
+            <div class="card-compra">
+                <img src="/assets/img/pampers.png">
+                <p>Fralda Pampers Pants</p>
+                <p>Ajuste Total M 84...</p>
+                <p id="promocaum">Leve 2 e pague</p>
+                <h2>R$ 91,99</h2>
+                <h5>40% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/granado.png">
+                <p>Repelente Granado Bebê</p>
+                <p>Pele Sensível 110ml</p>
+                <h2>R$ 43,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/pasta Infantil.png">
+                <p>Creme Dental Infantil</p>
+                <p>Oral-B Mickey 50g</p>
+                <h2>R$ 5,19</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/sabonete dove.png">
+                <p>Sabonete Líquido Dove</p>
+                <p>200ml</p>
+                <h2>R$ 17,49</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/lenço umidecido.png">
+                <p>Lenços Umidecidos</p>
+                <p>Johnsons Baby</p>
+                <h2>R$ 17,29</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+        </section>
+
+        <!-- Sessão Higiene-->
+
+        <section class="itens-compras produtosHigiene">
+            <div class="card-compra distancia">
+                <img src="/assets/img/desodorante.png">
+                <p>Desodorante Dove Origial</p>
+                <p>Aerisol 250ml</p>
+                <h2>R$ 19,90</h2>
+                <h5>22% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/sensodyne.png">
+                <p>Sensodyne Original</p>
+                <p>90g</p>
+                <h2>R$ 11,90</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/absorvente.png">
+                <p>Absorvente Noturno</p>
+                <p>Always Noites Tranquials</p>
+                <h2>R$ 34,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/rexona.png">
+                <p>Desodorante Rexona</p>
+                <p>150ml</p>
+                <h2>R$ 11,66</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/creme dental.png">
+                <p>Creme Dental Em Gel</p>
+                <p>100g</p>
+                <h2>R$ 5,30</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+        </section>
+
+        <!-- Sessão medicamentos e saúde-->
+
+        <section class="itens-compras produtosSaude">
+            <div class="card-compra">
+                <img src="/assets/img/sorrisal imagem.png">
+                <p>Sonrizal Tradicional</p>
+                <p>com 10 comprimidos efervecentes</p>
+                <h2>R$ 6,39</h2>
+                <h5>41% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/foto vitamina c.png">
+                <p>Vitamina C Triple 1g + Zinco + Vitamina D</p>
+                <p>com 10 comprimidos efervecentes</p>
+                <h2>R$ 13,80</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/captopril.png">
+                <p>Captopril 50mg</p>
+                <p>com 30 comprimidos</p>
+                <h2>R$ 11,95</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra distancia">
+                <img src="/assets/img/buscopan img.png">
+                <p>Buscopan</p>
+                <p>20 comprimidos</p>
+                <h2>R$ 14,89</h2>
+                <h5>25% off</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+        </section>
+
+        <!--Whey Protein-->
+
+        <section class="itens-compras produtoswhey">
+            <div class="card-compra">
+                <img src="/assets/img/whey.png">
+                <p>Voxx 100% Pro Whey Sabor</p>
+                <p>Chocolate 900g</p>
+                <h2>R$ 84,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/whey probiotioco.png">
+                <p>Pro Whey Protein Probiotica</p>
+                <p>Chocolate 500g</p>
+                <h2>R$ 33,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/pro whey isolada.png">
+                <p>Voxx 100% Pro Whey Isolada</p>
+                <p>Sabor Baunilha 900g</p>
+                <h2>R$ 152,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+        </section>
+
+        <!--Vitaminas-->
+
+        <section class="itens-compras produtosVitaminas">
+            <div class="card-compra">
+                <img src="/assets/img/nutren2.0.png">
+                <p>NUTREN 2.0 vitamina alimentar</p>
+                <p>200ml</p>
+                <h2>R$ 10,79</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/cogmax.png">
+                <p>COGMAX Eurofarma</p>
+                <p>90 Cápsulas</p>
+                <h2>R$ 109,65</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/vitawin2.png">
+                <p>Pharmaton Vitawin 2</p>
+                <p>30ml Sabor Caramelo</p>
+                <h2>R$ 28,00</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/namcare.png">
+                <p>Suplemento Pediátrico Nancare</p>
+                <p>Nestlé B.Lactis Com Vitamina D</p>
+                <p>5ml</p>
+                <h2>R$ 119,45</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div> 
+        </section>
+
+        <!--Skin care-->
+
+        <section class="itens-compras produtosSkin">
+            <div class="card-compra">
+                <img src="/assets/img/phoretin.png">
+                <p>Phloretin Cf Skinceuticals</p>
+                <p>30ml</p>
+                <h2>R$ 474,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/SERUM.png">
+                <p>Serúm Corretor H.A</p>
+                <p>Skinceuticals Rejuvenescedor</p>
+                <p>Facial 30ml</p>
+                <h2>R$ 394,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/retinol.png">
+                <p>Retinol 0.3 Skin</p>
+                <p>Ceuticals 30ml</p>
+                <h2>R$ 439,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/glicolic.png">
+                <p>Glycolic 10 Renew Overnight</p>
+                <p>Skinceuticals 50ml</p>
+                <h2>R$ 474,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+        </section>
+
+        <!--Perfumaria-->
+
+        <section class="itens-compras produtosPerfume">
+            <div class="card-compra">
+                <img src="/assets/img/lavanda.png">
+                <p>Colonia Phytoderm Lavanda</p>
+                <p>Agua perfumada 250ml</p>
+                <h2>R$ 15,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/romatica.png">
+                <p>Colonia Phytoderm Romantica</p>
+                <p>Agua perfumada 250ml</p>
+                <h2>R$ 15,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/sensual.png">
+                <p>Colonia Phytoderm Sensual</p>
+                <p>Agua perfumada 250ml</p>
+                <h2>R$ 15,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/adorada.png">
+                <p>Colonia Phytoderm Adorada</p>
+                <p>Agua perfumada 250ml</p>
+                <h2>R$ 15,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+            <div class="card-compra">
+                <img src="/assets/img/apaixonada.png">
+                <p>Colonia Phytoderm Apaixonada</p>
+                <p>Agua perfumada 250ml</p>
+                <h2>R$ 15,99</h2>
+                <h5>Preço Normal</h5>
+                <button onclick="adicionarItens()">Comprar</button>
+            </div>
+        </section>
+
+        <!--Rodapé-->
+
+        <div class="rodape">
+            <h3>Receba as melhores ofertas</h3>
+            <form>
+        <input class="color" type="email" placeholder="Digite seu email!">
+                <button type="submit"><i class="bi bi-arrow-right"></i></button>
+            </form>
+        </div>
+    </main>
+
+
+
+<script src="/assets/js/principal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</html>

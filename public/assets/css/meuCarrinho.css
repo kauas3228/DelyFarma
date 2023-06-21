@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    background-color: #3A95B5;
+    width: 100vw;
+    height: 7vh;
+    color: white;
+    align-items: center;
+    font-weight: bold;
+}
+
+.nav>p {
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.return {
+    align-items: center;
+    text-align: center;
+    border-radius: 100%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 2.3rem;
+    height: 2.3rem;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.return:hover {
+    box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #fff;
+}
+.products{
+    width: 90%;
+    height: 40vh;
+    margin-top: 2rem;
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tableProducts{
+    text-align: center;
+    width: 80%;
+    border: none;
+}
+th{
+    border: none;
+}
+img{
+    height: 10vh;
+}
+.info{
+    width: 11vw;
+}
+td{
+    height: 11vh;
+    font-weight: bold;
+    border: 1px solid black;
+}
+.quant{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quant2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quant3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#valor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    width: 3vw;
+    height: 3vh;
+}
+.menos{
+    cursor: pointer;
+    border: 1px solid gray;
+    background-color: white;
+    width: 1.5vw;
+    height: 3vh;
+}
+.mais{
+    cursor: pointer;
+    border: 1px solid gray;
+    background-color: white;
+    width: 1.5vw;
+    height: 3vh;
+}
+#valor2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    width: 3vw;
+    height: 3vh;
+}
+
+#valor3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    width: 3vw;
+    height: 3vh;
+}
+.menos2{
+    cursor: pointer;
+    border: 1px solid gray;
+    background-color: white;
+    width: 1.5vw;
+    height: 3vh;
+}
+.mais2{
+    cursor: pointer;
+    border: 1px solid gray;
+    background-color: white;
+    width: 1.5vw;
+    height: 3vh;
+}  
+.menos3{
+    cursor: pointer;
+    border: 1px solid gray;
+    background-color: white;
+    width: 1.5vw;
+    height: 3vh;
+}
+.mais3{
+    cursor: pointer;
+    border: 1px solid gray;
+    background-color: white;
+    width: 1.5vw;
+    height: 3vh;
+} 
+.item1{
+    display: table-row;
+}
+.remove{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    background-color: white;
+    border: grey 1px solid;
+    cursor: pointer;
+}
+
+.remove2{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    background-color: white;
+    border: grey 1px solid;
+    cursor: pointer;
+}
+.remove3{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    background-color: white;
+    border: grey 1px solid;
+    cursor: pointer;
+}
+.entrega{
+    margin-left: 14vw;
+    margin-top: 3rem;
+    width: 40vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+}
+.pagamento{
+    background-color: #3a95b5;
+    width: 10vw;
+    height: 5vh;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;    
+}
+.pagamento:hover{
+    background-color: rgb(58 149 130);
+    transition: 0.4s ease-in-out;
+}
+.adiconarEndereco{
+    border: gray 1px solid;
+    background-color: white;
+    width: 10vw;
+    height: 5vh;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;    
+}
+.totalAPagar{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    top: 26rem;
+    left: 43vw;
+    position: absolute;
+    width: 42.3vw;
+    height: 45vh;
+}
+.totalTabela{
+    width: 30vw;
+}
+.td1{
+    border-radius: 10px;
+    height: 7vh;
+    padding: 10px;
+}
+.td1{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.p1{
+    margin-left: 60%;
+}
+
+.p2{
+    margin-left: 66%;
+}
+input{
+    position: absolute;
+    top: 38vh;
+    left: 12.5vw;
+    width: 22vw;
+    height: 3vh;
+    border: gray solid 1px;
+}
+.add{
+    position: absolute;
+    top: 38vh;
+    height: 3vh;
+    width: 7vw;
+    background-color: #3A95B5;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+}

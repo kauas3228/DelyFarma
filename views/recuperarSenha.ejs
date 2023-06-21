@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styleRSenha.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="icon" href="/assets/img/grupo logo.svg">
+    <title>Recuperação de senha</title>
+</head>
+<body>
+    <div class="container">
+           <h1 class="esqueceuSenha">Esqueceu sua senha?</h1>
+           <p class="envioDeEmailText">Lhe enviaremos um email de confirmação para redefinir sua senha</p>
+
+           <form action="/user/home" method="post">
+            <input type="hidden" name="accessKey" value="7491b3f3-c40f-4baa-92f5-91d6ca00ebfd">
+            <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
+            <input type="hidden" name="message" value="Deseja recuperar sua senha?">
+
+            <input type="email" name="email" placeholder="Digite seu email" required>
+            <i class="bi bi-envelope" id="iconEmailRegistro"></i>
+
+            <button type="submit" class="btn-enviar">Enviar email</button>   
+        
+        </form>
+    </div>
+</body>
+</html>

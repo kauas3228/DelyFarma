@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!--  -->
+    <link rel="stylesheet" href="/assets/css/perfil.css">
+    <link rel="icon" href="/assets/img/grupo logo.svg">
+    <title>Perfil</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a href="/user/home"><button class="return"><i class="bi bi-arrow-left"></i></button></a>
+            <p>Perfil</p>
+        </div>
+    </header>
+    <main>
+        <article class="user">
+            <div class="main-padding">
+                <section class="preview">
+                    <img src="/assets/img/pen.svg" alt="Imagem de lápis" class="preview__icon">
+                    <div class="flex-column">
+                        <img src="/assets/img/user-profile.svg" alt="Imagem do usuário" class="user__pic">
+                    </div>
+                    <div class="flex-column">
+                        <h2 class="user__name">Nome</h2>
+                        <h2 class="user__username"><%= usuario   %></h2>
+                    </div>
+                </section>
+            </div>
+            <section class="infors">
+                <div class="infor">
+                    <h2 class="infor__title">Email</h2>
+                    <h3 class="infor__value"><%= email %></h3>
+                </div>
+                <div class="infor">
+                    <h2 class="infor__title">Telefone</h2>
+                    <h3 class="infor__value"><%= number %></h3>
+                </div>
+                <div class="infor">
+                    <h2 class="infor__title">CPF</h2>
+                    <h3 class="infor__value"><%= cpf %></h3>
+                </div>
+                <div class="infor">
+                    <h2 class="infor__title">Data de Nascimento</h2>
+                    <h3 class="infor__value">20/10/2000</h3>
+                </div>
+                <div class="infor">
+                    <h2 class="infor__title">Rua/Bairro</h2>
+                    <h3 class="infor__value">Rua Alberlado Luz</h3>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

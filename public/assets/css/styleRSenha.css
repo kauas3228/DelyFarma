@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #3a95b5;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Heebo';
+}
+.container{
+    width: 21.875rem;
+    height: 18rem;
+    background-color: white;
+    border-radius: 20px;
+}
+input[type="email"]{
+    position: absolute;
+    width: 15rem;
+    height: 2rem;
+    padding: 8px 0 9px 35px;
+    margin-top: 9rem;
+    margin-left: 3.5rem;
+    border-radius: 10px;
+    border: 1.1px solid #3a95b5;
+    outline: none;
+    caret-color: #3a95b5;
+    color: #3a95b5;
+}
+::placeholder{
+    color: #3a95b5;
+}
+.esqueceuSenha{
+    position: absolute;
+    color: #3a95b5;
+    font-family: 'Heebo';
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    font-weight: bold;
+}
+.envioDeEmailText{
+    position: absolute;
+    width: 15rem;
+    font-family: 'Heebo';
+    color: #3a95b5;
+    margin-top: 5.3rem;
+    font-weight: bolder;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 3.4rem;
+}
+#iconEmailRegistro{
+    color: #3a95b5;
+    position: absolute;
+    margin-top: 9.1rem;
+    font-size: 22px;
+    margin-left: 4rem;
+}
+.btn-enviar{
+    position: absolute;
+    width: 12rem;
+    height: 2rem;
+    font-family: 'Heebo';
+    background-color: #3a95b5;
+    border: none;
+    color: white;
+    margin-top: 12rem;
+    font-weight: bolder;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn-enviar:hover{
+    background-color: #3a95b5;
+    transition: 1s;
+}
